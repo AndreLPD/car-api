@@ -12,6 +12,10 @@ const CarSchema = new schema({
         type:String,
         required:true
     },
+    license:{
+        type:String,
+        required:true
+    },
     color:{
         type:String,
         required:true
@@ -27,6 +31,9 @@ const CarSchema = new schema({
     createdAt:{
         type:String,
         default: Date.now
+    },
+    updateAt:{
+        type:String,
     }
 });
 CarSchema.plugin(mongoosePaginate);

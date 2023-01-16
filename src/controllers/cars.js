@@ -6,9 +6,9 @@ const Car = mongoose.model("cars");
 module.exports = {
     async store(req, res){
 
-        const { model, description, color, year } = req.body;
+        const { model, description, license, color, year } = req.body;
 
-        const car = await Car.create({ model, description, color, year });
+        const car = await Car.create({ model, description, license, color, year });
 
         res.status(200).json({car});
     },
